@@ -4,53 +4,143 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lavin Beauty</title>
+<title>Lavin Beauty | Luxury Beauty</title>
 <style>
+* { box-sizing:border-box; scroll-behavior:smooth; }
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fff8f8;
-  color: #49353c;
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#fffaf8;
+ color:#49383b;
 }
 header {
-  background: #e9bfc9;
-  padding: 25px 10px;
-  text-align: center;
+ background:#f0d6d8;
+ text-align:center;
+ padding:35px 15px;
 }
 header h1 {
-  letter-spacing: 4px;
+ color:#8d5968;
+ letter-spacing:6px;
+ font-size:35px;
+ margin:5px;
 }
+header p { letter-spacing:3px; color:#9b7780; }
 nav {
-  background: #fff;
-  padding: 15px;
-  text-align: center;
+ background:#fff;
+ padding:17px 8px;
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap;
+ gap:20px;
+ position:sticky;
+ top:0;
+ z-index:10;
+ box-shadow:0 3px 12px #00000010;
 }
 nav a {
-  color: #895568;
-  text-decoration: none;
-  margin: 8px;
-  font-weight: bold;
+ text-decoration:none;
+ color:#91616e;
+ font-weight:bold;
+ font-size:14px;
 }
-section {
-  padding: 35px 20px;
-  text-align: center;
-}
+nav a:hover { color:#b99551; }
 .hero {
-  background: #f5dce2;
-  padding: 65px 15px;
+ min-height:470px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ padding:35px 20px;
+ color:white;
+ background:linear-gradient(#40252b55,#40252b55),
+ url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1400') center/cover;
 }
-h2 { color: #a65e77; }
+.hero h2 { font-size:42px; }
+.hero p { font-size:18px; }
+.btn {
+ display:inline-block;
+ background:#bd9a61;
+ color:white;
+ padding:14px 25px;
+ border-radius:30px;
+ text-decoration:none;
+ margin-top:15px;
+ border:0;
+ cursor:pointer;
+ font-weight:bold;
+}
+section { padding:65px 18px; text-align:center; }
+h2 { color:#a36d7c; font-size:29px; }
+.intro { max-width:700px; margin:auto; line-height:1.8; }
+.cards {
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:20px;
+ max-width:1000px;
+ margin:30px auto;
+}
 .card {
-  background: white;
-  padding: 20px;
-  margin: 12px auto;
-  max-width: 400px;
-  border-radius: 15px;
+ background:white;
+ border-radius:15px;
+ overflow:hidden;
+ box-shadow:0 5px 18px #9d69751a;
+ padding-bottom:20px;
 }
+.card img {
+ width:100%;
+ height:190px;
+ object-fit:cover;
+}
+.card h3 { color:#a36d7c; }
+.card p { padding:0 15px; line-height:1.6; }
+.soft { background:#f8e9e9; }
+.gallery {
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+ gap:12px;
+ max-width:1000px;
+ margin:25px auto;
+}
+.gallery img {
+ width:100%;
+ height:210px;
+ object-fit:cover;
+ border-radius:12px;
+}
+.tips {
+ max-width:750px;
+ margin:25px auto;
+ line-height:1.9;
+ text-align:left;
+}
+form {
+ max-width:500px;
+ margin:25px auto;
+ display:grid;
+ gap:13px;
+}
+input,select,textarea {
+ width:100%;
+ padding:14px;
+ border:1px solid #e3c6ca;
+ border-radius:9px;
+ font-size:15px;
+ background:white;
+}
+textarea { min-height:100px; }
 footer {
-  background: #e9bfc9;
-  padding: 20px;
-  text-align: center;
+ background:#e9c9ce;
+ text-align:center;
+ padding:30px 15px;
+ line-height:1.8;
+}
+@media(max-width:600px) {
+ header h1 { font-size:29px; }
+ nav { gap:13px; }
+ nav a { font-size:13px; }
+ .hero { min-height:380px; }
+ .hero h2 { font-size:32px; }
+ section { padding:48px 15px; }
 }
 </style>
 </head>
@@ -58,7 +148,7 @@ footer {
 
 <header>
 <h1>LAVIN BEAUTY</h1>
-<p>Güzelliğin ve zarafetin adresi</p>
+<p>LUXURY BEAUTY & FASHION</p>
 </header>
 
 <nav>
@@ -66,43 +156,132 @@ footer {
 <a href="#hakkimizda">Hakkımızda</a>
 <a href="#hizmetler">Hizmetler</a>
 <a href="#moda">Moda</a>
+<a href="#galeri">Galeri</a>
+<a href="#randevu">Randevu</a>
 <a href="#iletisim">İletişim</a>
 </nav>
 
 <div class="hero" id="anasayfa">
-<h2>Güzelliğini Keşfet!</h2>
-<p>Kendine ayırdığın zamanın en güzel hali.</p>
+<div>
+<h2>Güzelliğin Işıltısını Keşfet</h2>
+<p>Zarafet, bakım ve güzellik bir arada.</p>
+<a class="btn" href="#hizmetler">Hizmetlerimizi Keşfet</a>
+</div>
 </div>
 
 <section id="hakkimizda">
 <h2>Hakkımızda</h2>
-<p>Lavin Beauty, güzellik ve bakım alanında
-kendinizi özel hissetmeniz için tasarlanmış
-bir güzellik salonudur.</p>
+<div class="intro">
+<p>Lavin Beauty'ye hoş geldiniz! Güzellik ve bakım
+dünyasını zarafetle buluşturuyoruz. Kendinizi özel
+hissetmeniz için güzellik, moda ve bakım alanlarında
+ilham veren bir ortam sunuyoruz.</p>
+<p>Güzellik bir ayrıntı değil, kendini iyi hissetme
+sanatıdır.</p>
+</div>
 </section>
 
-<section id="hizmetler">
+<section class="soft" id="hizmetler">
 <h2>Hizmetlerimiz</h2>
-<div class="card">💇‍♀️ Saç Tasarımı</div>
-<div class="card">💄 Profesyonel Makyaj</div>
-<div class="card">🌸 Cilt Bakımı</div>
-<div class="card">💅 Manikür ve Pedikür</div>
+<p>Güzelliğiniz için özenle hazırlanan hizmetlerimiz.</p>
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600" alt="Saç tasarımı">
+<h3>Saç Tasarımı</h3>
+<p>Saçlarınıza özel bakım ve tasarım önerileri.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600" alt="Makyaj">
+<h3>Makyaj</h3>
+<p>Özel günler için makyaj ve güzellik önerileri.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=600" alt="Cilt bakımı">
+<h3>Cilt Bakımı</h3>
+<p>Cilt bakımında günlük bakım ve güzellik önerileri.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600" alt="Tırnak bakımı">
+<h3>Manikür</h3>
+<p>Tırnak bakımı ve zarif tasarım fikirleri.</p>
+</div>
+</div>
 </section>
 
 <section id="moda">
-<h2>Moda Dünyası</h2>
-<p>En yeni moda trendleri ve güzellik önerileri.</p>
+<h2>Moda & Güzellik</h2>
+<div class="intro">
+<p>Yeni sezonun renkleri, zarif kombinler,
+makyaj trendleri ve güzellik dünyasından
+ilham veren fikirler Lavin Beauty'de!</p>
+</div>
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="Moda">
+<h3>Moda Trendleri</h3>
+<p>Tarzına ilham verecek kombin fikirleri.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600" alt="Makyaj ürünleri">
+<h3>Makyaj Dünyası</h3>
+<p>Renkler, ürünler ve makyaj trendleri.</p>
+</div>
+</div>
 </section>
 
-<section id="iletisim">
+<section class="soft" id="galeri">
+<h2>Güzellik Galerimiz</h2>
+<p>Lavin Beauty'nin ilham veren dünyası.</p>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500" alt="Güzellik">
+<img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=500" alt="Salon">
+<img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500" alt="Makyaj">
+<img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500" alt="Tırnak">
+</div>
+</section>
+
+<section id="randevu">
+<h2>Randevu Talebi</h2>
+<p>İlgilendiğiniz hizmeti seçerek demo randevu talebinizi oluşturun.</p>
+<form id="appointment">
+<input type="text" placeholder="Adınız" required>
+<input type="email" placeholder="E-posta adresiniz" required>
+<select required>
+<option value="">Hizmet seçiniz</option>
+<option>Saç Tasarımı</option>
+<option>Makyaj</option>
+<option>Cilt Bakımı</option>
+<option>Manikür</option>
+</select>
+<input type="date" required>
+<textarea placeholder="Notunuz (isteğe bağlı)"></textarea>
+<button class="btn" type="submit">Randevu Talebi Oluştur</button>
+</form>
+<p id="message"></p>
+</section>
+
+<section class="soft" id="iletisim">
 <h2>İletişim</h2>
 <p>Adres: Gaziantep</p>
-<p>E-posta: info@lavinbeauty.com</p>
+<p>Markamız: Lavin Beauty</p>
+<p>Bizimle iletişime geçmek için salon iletişim bilgilerimizi takip edin.</p>
 </section>
 
 <footer>
-<p>© 2026 Lavin Beauty | Tüm Hakları Saklıdır.</p>
+<h2>LAVIN BEAUTY</h2>
+<p>Güzelliğin ve zarafetin adresi.</p>
+<p>© 2026 Lavin Beauty | Tüm hakları saklıdır.</p>
 </footer>
+
+<script>
+document.getElementById("appointment").addEventListener("submit",function(e){
+ e.preventDefault();
+ document.getElementById("message").textContent =
+ "Demo randevu talebiniz hazırlandı. Gerçek randevu gönderimi henüz etkin değil.";
+ this.reset();
+});
+</script>
 
 </body>
 </html>
+
